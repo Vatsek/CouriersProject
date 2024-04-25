@@ -1,0 +1,14 @@
+{% load static %}
+
+{% block style %}
+{% endblock %}
+
+{% block content %}
+    <form class="form " method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <div>
+        <input class="button" type="submit" value='Сохранить'>
+    </div>
+    </form>
+{% endblock %}

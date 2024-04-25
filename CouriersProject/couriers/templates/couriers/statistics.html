@@ -1,0 +1,14 @@
+{% load static %}
+
+{% block style %}
+{% endblock %}
+
+{% block content %}
+    <h1>Статистика</h1>
+    {{ courier }}
+    {% for card in cards %}
+        <p>{{ card.date }} - {{ card.count_deliveries }}</p>
+    {% endfor %}
+
+    {{ courier.couriercard_set.all }}
+{% endblock %}
